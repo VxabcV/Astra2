@@ -1,0 +1,15 @@
+[Unit]
+Description=Astra TCP Server
+After=network.target
+
+[Service]
+Type=simple
+User=azureuser
+WorkingDirectory=/home/azureuser/astra
+ExecStart=/home/azureuser/astra/sam-astra
+Restart=always
+RestartSec=10
+SyslogIdentifier=astra-tcp
+
+[Install]
+WantedBy=multi-user.target
